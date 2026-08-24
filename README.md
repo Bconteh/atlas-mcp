@@ -285,7 +285,9 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
 
 ---
 
-## 🔌 Integrating with GitHub Copilot (VS Code)
+## 🔌 Integrating with GitHub Copilot
+
+### VS Code
 
 Create `.vscode/mcp.json` in your workspace:
 
@@ -299,6 +301,59 @@ Create `.vscode/mcp.json` in your workspace:
   }
 }
 ```
+
+### IntelliJ IDEA / JetBrains
+
+> **Note:** GitHub Copilot MCP support in JetBrains depends on your installed GitHub Copilot plugin version. The exact settings labels can vary slightly between releases.
+
+1. Start the Atlas MCP server:
+
+```bash
+cd mcp-server
+source .venv/bin/activate
+APP_ENV=dev python -m src.main
+```
+
+2. In IntelliJ IDEA, open:
+   - **macOS:** `IntelliJ IDEA` → `Settings`
+   - **Windows/Linux:** `File` → `Settings`
+
+3. Go to the GitHub Copilot MCP settings page. In recent builds this is typically under a path similar to:
+   - `Tools` → `GitHub Copilot` → `MCP`
+   - or `GitHub Copilot` → `Model Context Protocol`
+
+4. Add a new MCP server with these values:
+
+```text
+Name: atlas-mcp
+Transport: SSE / HTTP
+URL: http://localhost:8000/mcp/sse
+```
+
+5. Save the configuration, then reopen Copilot Chat (or restart IntelliJ if needed).
+
+6. In Copilot Chat, confirm the MCP server is available and use prompts such as:
+
+```text
+Create a change request with date 07/04/2026 - 07/06/2026 with title Apollo server upgrade
+What's the status of CHG123456?
+Add a deployment task to CHG123456 for deploying artifact git-tools app
+```
+
+#### Optional: stdio-based JetBrains configuration
+
+If your JetBrains GitHub Copilot build supports launching MCP servers via `stdio`, use the following values instead of SSE:
+
+```text
+Command: python
+Arguments: -m src.main stdio
+Working directory: /absolute/path/to/atlas-mcp/mcp-server
+Environment variables:
+  APP_ENV=dev
+  PYTHONPATH=/absolute/path/to/atlas-mcp/mcp-server
+```
+
+SSE is the recommended option for this project because the server already exposes `http://localhost:8000/mcp/sse`.
 
 ---
 
