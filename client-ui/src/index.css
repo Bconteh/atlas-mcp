@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-gray-100 antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { @apply bg-gray-900; }
+::-webkit-scrollbar-thumb { @apply bg-gray-600 rounded-full; }
+::-webkit-scrollbar-thumb:hover { @apply bg-gray-500; }
+
+/* Message markdown styles */
+.message-content h1, .message-content h2, .message-content h3 {
+  @apply font-semibold text-white mt-2 mb-1;
+}
+.message-content strong { @apply font-semibold text-white; }
+.message-content ul { @apply list-disc ml-4 space-y-1; }
+.message-content p { @apply mb-2 last:mb-0; }
+

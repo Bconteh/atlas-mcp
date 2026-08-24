@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "atlas-mcp": {
+      "command": "python",
+      "args": ["-m", "src.main", "stdio"],
+      "cwd": "/path/to/atlas-mcp/mcp-server",
+      "env": {
+        "APP_ENV": "dev",
+        "PYTHONPATH": "/path/to/atlas-mcp/mcp-server"
+      }
+    }
+  }
+}
+

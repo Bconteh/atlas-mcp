@@ -1,0 +1,136 @@
+{
+  "change_requests": [
+    {
+      "id": "CHG123456",
+      "title": "Apollo Server Upgrade",
+      "description": "Upgrade Apollo GraphQL server from v2 to v4. This includes updating all resolvers, middleware, and authentication plugins.",
+      "status": "open",
+      "start_date": "07/04/2026",
+      "end_date": "07/06/2026",
+      "risk_level": "medium",
+      "environment": "prod",
+      "created_by": "john.doe@example.com",
+      "created_at": "2026-06-20T10:00:00Z",
+      "updated_at": "2026-06-20T10:00:00Z",
+      "approval_notes": null,
+      "close_reason": null,
+      "tasks": [
+        {
+          "id": "TASK-001",
+          "title": "Update Apollo Server dependencies",
+          "description": "Update package.json to use Apollo Server v4 and resolve breaking changes",
+          "assignee": "alice.smith@example.com",
+          "status": "completed",
+          "created_at": "2026-06-20T10:05:00Z"
+        },
+        {
+          "id": "TASK-002",
+          "title": "Migrate resolvers to new API",
+          "description": "Refactor all GraphQL resolvers to use the new Apollo Server v4 API",
+          "assignee": "bob.jones@example.com",
+          "status": "in_progress",
+          "created_at": "2026-06-20T10:10:00Z"
+        }
+      ]
+    },
+    {
+      "id": "CHG123457",
+      "title": "Database Schema Migration - User Tables",
+      "description": "Migrate user-related database tables to new schema with improved indexing and partitioning.",
+      "status": "in_progress",
+      "start_date": "07/01/2026",
+      "end_date": "07/10/2026",
+      "risk_level": "high",
+      "environment": "prod",
+      "created_by": "jane.doe@example.com",
+      "created_at": "2026-06-18T09:00:00Z",
+      "updated_at": "2026-07-01T08:30:00Z",
+      "approval_notes": "Approved by CAB on 2026-06-25",
+      "close_reason": null,
+      "tasks": [
+        {
+          "id": "TASK-003",
+          "title": "Backup existing database",
+          "description": "Create full backup of production database before migration",
+          "assignee": "carol.white@example.com",
+          "status": "completed",
+          "created_at": "2026-06-18T09:05:00Z"
+        },
+        {
+          "id": "TASK-004",
+          "title": "Run migration scripts",
+          "description": "Execute schema migration scripts in maintenance window",
+          "assignee": "carol.white@example.com",
+          "status": "in_progress",
+          "created_at": "2026-06-18T09:10:00Z"
+        },
+        {
+          "id": "TASK-005",
+          "title": "Validate data integrity",
+          "description": "Run data integrity checks post-migration",
+          "assignee": "dave.brown@example.com",
+          "status": "pending",
+          "created_at": "2026-06-18T09:15:00Z"
+        }
+      ]
+    },
+    {
+      "id": "CHG123458",
+      "title": "Network Firewall Rule Update",
+      "description": "Update firewall rules to allow new microservices to communicate over port 8443.",
+      "status": "closed",
+      "start_date": "06/15/2026",
+      "end_date": "06/16/2026",
+      "risk_level": "low",
+      "environment": "prod",
+      "created_by": "network.team@example.com",
+      "created_at": "2026-06-10T14:00:00Z",
+      "updated_at": "2026-06-16T17:00:00Z",
+      "approval_notes": "Approved by security team",
+      "close_reason": "Successfully implemented and verified",
+      "tasks": [
+        {
+          "id": "TASK-006",
+          "title": "Update firewall rules on primary node",
+          "description": "Apply new ACL rules to primary firewall",
+          "assignee": "network.admin@example.com",
+          "status": "completed",
+          "created_at": "2026-06-10T14:05:00Z"
+        }
+      ]
+    },
+    {
+      "id": "CHG123459",
+      "title": "SSL Certificate Renewal",
+      "description": "Renew SSL certificates for all public-facing services before expiry on 08/01/2026.",
+      "status": "draft",
+      "start_date": "07/25/2026",
+      "end_date": "07/26/2026",
+      "risk_level": "medium",
+      "environment": "prod",
+      "created_by": "security.team@example.com",
+      "created_at": "2026-07-01T11:00:00Z",
+      "updated_at": "2026-07-01T11:00:00Z",
+      "approval_notes": null,
+      "close_reason": null,
+      "tasks": []
+    },
+    {
+      "id": "CHG123460",
+      "title": "Git-Tools Deployment to Staging",
+      "description": "Deploy git-tools v2.1.0 artifact to staging environment for validation.",
+      "status": "open",
+      "start_date": "07/08/2026",
+      "end_date": "07/09/2026",
+      "risk_level": "low",
+      "environment": "uit",
+      "created_by": "devops.team@example.com",
+      "created_at": "2026-07-03T08:00:00Z",
+      "updated_at": "2026-07-03T08:00:00Z",
+      "approval_notes": null,
+      "close_reason": null,
+      "tasks": []
+    }
+  ]
+}
+
